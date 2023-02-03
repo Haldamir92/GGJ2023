@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &1
 MonoBehaviour:
-  m_ObjectHideFlags: 61
+  m_ObjectHideFlags: 53
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -27,7 +27,7 @@ MonoBehaviour:
   sendFrequency: 20
   recvFrequency: 60
   bakeMode: 0
-  schemaBakeFolderGuid: 
+  schemaBakeFolderGuid: 8b2e07a6e0109b94db94dcf5693ba356
   runtimeSettingsGuid: 0e594ff1685d55e47aaeee9feb246678
   prefabMapperGuid: 41060b6b81a60b84a92b2aa9902888f9
   schemaBakeGenerateAsmdef: 0
