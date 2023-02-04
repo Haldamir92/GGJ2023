@@ -985,6 +985,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   normalizedPosition: {fileID: 11400000, guid: 35143b6b97a1baa4ebc9a13d651749ba, type: 2}
   verticalSpeed: {fileID: 11400000, guid: 07cc4d5aaac78f84fa5d59d775861dc1, type: 2}
+  minWorldBounds: {fileID: 11400000, guid: d15e5d34bf38cb84abc2c650aeba9dfc, type: 2}
+  maxWorldBounds: {fileID: 11400000, guid: d68f38a7814f322439a074017297b43b, type: 2}
 --- !u!1001 &1925041227
 PrefabInstance:
   m_ObjectHideFlags: 0

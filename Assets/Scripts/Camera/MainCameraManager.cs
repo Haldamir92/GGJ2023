@@ -21,6 +21,12 @@ public class MainCameraManager : MonoBehaviour
     [SerializeField]
     private FloatVariable verticalSpeed;
 
+    [SerializeField]
+    private Vector3Variable minWorldBounds;
+
+    [SerializeField]
+    private Vector3Variable maxWorldBounds;
+
     void Update()
     {
         cameraTarget.transform.position += Vector3.down * verticalSpeed.Value * Time.deltaTime;
@@ -31,5 +37,8 @@ public class MainCameraManager : MonoBehaviour
         {
             enabled = false;
         }
+
+        minWorldBounds.Value = Camera.main.ViewportToWorldPoint(Vector3.zero);
+        maxWorldBounds.Value = Camera.main.ViewportToWorldPoint(Vector3.one);
     }
 }
