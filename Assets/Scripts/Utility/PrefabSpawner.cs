@@ -9,12 +9,13 @@ public class PrefabSpawner : MonoBehaviour
 
     [SerializeField]
     private float spawnTime = 1;
-    
+
     [SerializeField]
     private float scale = 1;
+
     public float Scale { get => scale; set => scale = value; }
 
-    void Start()
+    private void Start()
     {
         StartCoroutine(PrintSprite());
     }
@@ -28,5 +29,12 @@ public class PrefabSpawner : MonoBehaviour
 
             yield return new WaitForSeconds(spawnTime);
         }
+    }
+
+    public void SetScale(float size)
+    {
+        scale = size;
+        StopAllCoroutines();
+        StartCoroutine(PrintSprite());
     }
 }
