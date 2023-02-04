@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 
 public class PlayerInputManager : MonoBehaviour
@@ -24,7 +25,6 @@ public class PlayerInputManager : MonoBehaviour
             transform.position += Vector3.right * Time.deltaTime * movingSpeed;
         }
 
-        transform.position += Vector3.down * Time.deltaTime * movingSpeed;
     }
 
 }
