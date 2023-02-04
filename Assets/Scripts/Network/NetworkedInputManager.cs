@@ -2,6 +2,7 @@ using Coherence.Toolkit;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Searcher.SearcherWindow.Alignment;
 using static UnityEngine.InputSystem.InputAction;
 
 public class NetworkedInputManager : MonoBehaviour
@@ -14,27 +15,31 @@ public class NetworkedInputManager : MonoBehaviour
     NetworkedCharacterController charController;
 
     Vector2 horizontalValue = Vector2.zero;
+
+    const string HORIZONTALAXIS = "horizontal";
+
     public void GetHorizontalAxis(CallbackContext ctx)
     {
-        if (ctx.started)
+        if (objectSync.HasInputAuthority)
         {
             horizontalValue = ctx.ReadValue<Vector2>();
-            inputSync.SetAxisState("horizontal", horizontalValue);
+            inputSync.SetAxisState(HORIZONTALAXIS, horizontalValue);
             Debug.Log($"Sending input value: {horizontalValue}");
         }
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if (!objectSync.MonoBridge.IsSimulatorOrHost)
+        if (inputSync == null)
+            return;
+        if (objectSync == null)
             return;
 
-        if (inputSync != null)
+        if (objectSync.HasStateAuthority || objectSync.HasInputAuthority)
         {
-            var horizontal = inputSync.GetAxisState("horizontal");
+            var horizontal = inputSync.GetAxisState(HORIZONTALAXIS);
             charController.SetMoveInput(horizontal);
             Debug.Log($"Receiving value: {horizontal}");
         }
     }
-
 }

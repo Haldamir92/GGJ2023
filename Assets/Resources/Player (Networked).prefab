@@ -186,8 +186,8 @@ MonoBehaviour:
   bakedScriptType: Coherence.Generated.CoherenceSyncPlayer__char_32___char_40_Networked__char_41_,
     Assembly-CSharp
   approveAuthorityTransferRequests: 1
-  simulationType: 3
-  authorityTransferType: 2
+  simulationType: 0
+  authorityTransferType: 0
   orphanedBehavior: 0
   lifetimeType: 0
   uniquenessType: 0
@@ -393,7 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputSync: {fileID: 1007895909162677607}
   objectSync: {fileID: 8083419649564453294}
-  charController: {fileID: 0}
+  charController: {fileID: 5487524186071029196}
 --- !u!114 &5487524186071029196
 MonoBehaviour:
   m_ObjectHideFlags: 0
