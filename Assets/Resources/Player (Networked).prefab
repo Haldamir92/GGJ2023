@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2812603000474697691}
   - component: {fileID: 2078612643035191817}
   - component: {fileID: 8083419649564453294}
-  - component: {fileID: 1007895909162677607}
   - component: {fileID: 8500711669012774475}
   - component: {fileID: 7265623937008441319}
   - component: {fileID: 5487524186071029196}
@@ -187,7 +186,7 @@ MonoBehaviour:
     Assembly-CSharp
   approveAuthorityTransferRequests: 1
   simulationType: 0
-  authorityTransferType: 0
+  authorityTransferType: 2
   orphanedBehavior: 0
   lifetimeType: 0
   uniquenessType: 0
@@ -198,6 +197,7 @@ MonoBehaviour:
   customBindings: []
   bindings:
   - rid: 793097616050356224
+  - rid: 793097632681558016
   onNetworkedInstantiation:
     m_PersistentCalls:
       m_Calls: []
@@ -264,27 +264,52 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
---- !u!114 &1007895909162677607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3381413763975405499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc97a814921d461188a38ca20db6787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InitialBufferSize: 32
-  InitialBufferDelay: 3
-  DisconnectOnTimeReset: 0
-  DestroyOnInputAuthorityDisconnected: 1
-  UseFixedSimulationFrames: 0
-  inputName: Player (Networked)
-  fields:
-  - name: horizontal
-    type: 0
+    - rid: 793097632681558016
+      type: {class: RotationBinding, ns: Coherence.Toolkit.Bindings.TransformBindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 793097632681558017
+        routing: 0
+        isPredicted: 0
+        defaultInterpolationPath: 
+        guid: a8103802-c01c-4d3e-aff5-ccf9874a5132
+        archetypeData:
+          type: 8
+          minRange: 0
+          maxRange: 0
+          sampleRate: 20
+          floatCompression: 0
+          fields:
+          - type: 8
+            bits: 32
+            minRange: 0
+            maxRange: 0
+            precision: 0.00000008381903171539307
+            floatCompression: 0
+          sharedBinding: {fileID: 0}
+        unityComponent: {fileID: 2089167500652390525}
+        coherenceSync: {fileID: 0}
+        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5, type: 2}
+    - rid: 793097632681558017
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: rotation
+        monoAssemblyType: UnityEngine.Quaternion, UnityEngine
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 1
+        valueSyncCallbackName: 
+        memberType: 64
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.TransformBindings.RotationBinding,
+            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
 --- !u!114 &8500711669012774475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81096dd3f6c44754bb16c7108606bcaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputSync: {fileID: 1007895909162677607}
+  inputSync: {fileID: 0}
   objectSync: {fileID: 8083419649564453294}
   charController: {fileID: 5487524186071029196}
 --- !u!114 &5487524186071029196
