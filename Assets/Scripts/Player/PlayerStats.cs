@@ -5,8 +5,42 @@ using UnityAtoms.BaseAtoms;
 
 public class PlayerStats : MonoBehaviour
 {
-    public void Die()
+    [SerializeField]
+    private GameObjectValueList players;
+
+    [SerializeField]
+    private BoolVariableInstancer isPlayerInsideCameraBounds;
+
+    private void OnEnable()
     {
-        gameObject.SetActive(false);
+        players.Add(gameObject);
+    }
+
+    private void Update()
+    {
+        if(!isPlayerInsideCameraBounds.Value)
+        {
+            Respawn();
+        }
+    }
+
+    private void Respawn()
+    {
+        int randomIndex = Random.Range(0, players.Count - 1);
+
+        for(int i = 0; i < players.Count; i++)
+        {
+            if (players[i] != gameObject)
+            {
+                if(randomIndex == 0)
+                {
+                    transform.position = players[i].transform.position;
+                }
+                else
+                {
+                    randomIndex--;
+                }
+            }
+        }
     }
 }
