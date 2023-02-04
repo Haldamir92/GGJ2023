@@ -9,25 +9,22 @@ public class PrefabSpawner : MonoBehaviour
 
     [SerializeField]
     private float spawnTime = 1;
+    
+    [SerializeField]
+    private float scale = 1;
+    public float Scale { get => scale; set => scale = value; }
 
     void Start()
     {
         StartCoroutine(PrintSprite());
     }
 
-    [SerializeField]
-    private float rotationSpeed;
-
-    private void Update()
-    {
-        transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
-    }
-
     private IEnumerator PrintSprite()
     {
         while (true)
         {
-            Instantiate(prefab, transform.position, Quaternion.identity);
+            GameObject go = Instantiate(prefab, transform.position, Quaternion.identity);
+            go.transform.localScale = Vector3.one * scale;
 
             yield return new WaitForSeconds(spawnTime);
         }
