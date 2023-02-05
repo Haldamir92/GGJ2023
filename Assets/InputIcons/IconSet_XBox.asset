@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138d433b4f89c7540b8b60c5ee1b5ea1, type: 3}
+  m_Name: IconSet_XBox
+  m_EditorClassIdentifier: 
+  iconSetName: XBox
+  deviceDisplayColor: {r: 0.2769024, g: 1, b: 0.25943398, a: 1}
+  unboundData:
+    textMeshStyleTag: 
+    sprite: {fileID: 21300000, guid: af247f9a44845ae4da6bb3c5db9f229b, type: 3}
+  fallbackData:
+    textMeshStyleTag: FallbackSprite
+    sprite: {fileID: 21300000, guid: aff605d3f0ceb90479d74aae3ce40bd1, type: 3}
+  customContextIcons:
+  - customInputContextSprite: {fileID: 21300000, guid: 8bb587f5600277f448bf6e9125d3b1ff, type: 3}
+    textMeshStyleTag: Start
+  - customInputContextSprite: {fileID: 21300000, guid: 3799c3e75f7b5d54fad22c087ceedbba, type: 3}
+    textMeshStyleTag: Select
+  - customInputContextSprite: {fileID: 21300000, guid: 7ec1ca814e2e56a4c96700d0806c0602, type: 3}
+    textMeshStyleTag: Cancel
+  - customInputContextSprite: {fileID: 21300000, guid: 9a78fd06c1d060a458c95bc14d50891b, type: 3}
+    textMeshStyleTag: Submit
+  lStick:
+    textMeshStyleTag: Left Stick
+    sprite: {fileID: 21300000, guid: cdae32a7b95a1e14481a5cd4b490cf0e, type: 3}
+  lStick_Up:
+    textMeshStyleTag: Left Stick/Up
+    sprite: {fileID: 21300000, guid: a9338a0305e61a943be68be7ceffbe98, type: 3}
+  lStick_Down:
+    textMeshStyleTag: Left Stick/Down
+    sprite: {fileID: 21300000, guid: 628afdfe71fa62648a3a7b556a190f87, type: 3}
+  lStick_Left:
+    textMeshStyleTag: Left Stick/Left
+    sprite: {fileID: 21300000, guid: 5a80b39304c127640b8659a05e002681, type: 3}
+  lStick_Right:
+    textMeshStyleTag: Left Stick/Right
+    sprite: {fileID: 21300000, guid: e7b962bfc860bcd409d2e39b26327abb, type: 3}
+  lStick_Click:
+    textMeshStyleTag: Left Stick Press
+    sprite: {fileID: 21300000, guid: ed3ae10f70985ea45b496eafeb6f60d3, type: 3}
+  rStick:
+    textMeshStyleTag: Right Stick
+    sprite: {fileID: 21300000, guid: 4fc772a9c8e53ea4bbf0a1158833c06c, type: 3}
+  rStick_Up:
+    textMeshStyleTag: Right Stick/Up
+    sprite: {fileID: 21300000, guid: d494225936a9e1a42b7b6b7ee20ccff8, type: 3}
+  rStick_Down:
+    textMeshStyleTag: Right Stick/Down
+    sprite: {fileID: 21300000, guid: f8a7c010657ec27459d68ee5e4a4bfcc, type: 3}
+  rStick_Left:
+    textMeshStyleTag: Right Stick/Left
+    sprite: {fileID: 21300000, guid: c2600dd4a9b844f4caf437feb15b0f52, type: 3}
+  rStick_Right:
+    textMeshStyleTag: Right Stick/Right
+    sprite: {fileID: 21300000, guid: 13eb878109b49c440bb0e593320b9241, type: 3}
+  rStick_Click:
+    textMeshStyleTag: Right Stick Press
+    sprite: {fileID: 21300000, guid: fd9d454c6856cc44f8853273d78600b5, type: 3}
+  dPad:
+    textMeshStyleTag: D-Pad
+    sprite: {fileID: 21300000, guid: 3aeacf0904d138e478004eaadb3d0421, type: 3}
+  dPad_Up:
+    textMeshStyleTag: D-Pad/Up
+    sprite: {fileID: 21300000, guid: 04bf3f8c312f63f40b0410a4089ac8cf, type: 3}
+  dPad_Down:
+    textMeshStyleTag: D-Pad/Down
+    sprite: {fileID: 21300000, guid: 20f0b78ae68db7746aa9576eae7e9c4e, type: 3}
+  dPad_Left:
+    textMeshStyleTag: D-Pad/Left
+    sprite: {fileID: 21300000, guid: 98f5a692fc8148441bf9f855f3ec1959, type: 3}
+  dPad_Right:
+    textMeshStyleTag: D-Pad/Right
+    sprite: {fileID: 21300000, guid: 5b66d35210c3d5c4dbb91e9c725e6525, type: 3}
+  north:
+    textMeshStyleTag: Button North
+    sprite: {fileID: 21300000, guid: fb19a512a39113f4299d064cca81f085, type: 3}
+  south:
+    textMeshStyleTag: Button South
+    sprite: {fileID: 21300000, guid: 9a78fd06c1d060a458c95bc14d50891b, type: 3}
+  west:
+    textMeshStyleTag: Button West
+    sprite: {fileID: 21300000, guid: 7210d983129724e4e84afe0adbb1ec32, type: 3}
+  east:
+    textMeshStyleTag: Button East
+    sprite: {fileID: 21300000, guid: 7ec1ca814e2e56a4c96700d0806c0602, type: 3}
+  l1:
+    textMeshStyleTag: Left Shoulder
+    sprite: {fileID: 21300000, guid: 89f89af09cfaef144b28f68e5f9ebeb5, type: 3}
+  l2:
+    textMeshStyleTag: Left Trigger
+    sprite: {fileID: 21300000, guid: 8a5b047c171da064cb20c51bed44c0c4, type: 3}
+  r1:
+    textMeshStyleTag: Right Shoulder
+    sprite: {fileID: 21300000, guid: a84c522449af1554592168f74d480bde, type: 3}
+  r2:
+    textMeshStyleTag: Right Trigger
+    sprite: {fileID: 21300000, guid: 63c1e5a4c6fc21540a56fbf66b50ba97, type: 3}
