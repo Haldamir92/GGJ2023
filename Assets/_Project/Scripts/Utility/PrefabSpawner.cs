@@ -15,6 +15,8 @@ public class PrefabSpawner : MonoBehaviour
 
     public float Scale { get => scale; set => scale = value; }
 
+    private List<GameObject> tailGameObjectList = new List<GameObject>();
+
     private void Start()
     {
         StartCoroutine(PrintSprite());
@@ -26,7 +28,7 @@ public class PrefabSpawner : MonoBehaviour
         {
             GameObject go = Instantiate(prefab, transform.position, Quaternion.identity);
             go.transform.localScale = Vector3.one * scale;
-
+            tailGameObjectList.Add(go);
             yield return new WaitForSeconds(spawnTime);
         }
     }
@@ -36,5 +38,13 @@ public class PrefabSpawner : MonoBehaviour
         scale = size;
         StopAllCoroutines();
         StartCoroutine(PrintSprite());
+    }
+
+    public void IncreaseTailSize()
+    {
+        foreach (GameObject tailNode in tailGameObjectList)
+        {
+            tailNode.transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+        }
     }
 }

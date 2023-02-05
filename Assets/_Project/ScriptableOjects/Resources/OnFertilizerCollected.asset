@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 909dcf730fd12e64aac24fe809f29a7d, type: 3}
-  m_Name: Boh
+  m_Script: {fileID: 11500000, guid: 04d35e2eb934747da9d77a3af62bb8ca, type: 3}
+  m_Name: OnFertilizerCollected
   m_EditorClassIdentifier: 
-  clip: {fileID: 0}
-  volume: 0.25
+  _developerDescription: 
+  _replayBufferSize: 1
