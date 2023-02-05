@@ -293,8 +293,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d662fc021555b04a91a30422304b577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 3
   players: {fileID: 11400000, guid: 112eef117781ece4ea84d28128679fc7, type: 2}
   isPlayerInsideCameraBounds: {fileID: 7940419173471417483}
+  onGameOver:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!58 &2830157563508549031
 CircleCollider2D:
   m_ObjectHideFlags: 0
