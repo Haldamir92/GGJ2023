@@ -571,13 +571,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerList: {fileID: 11400000, guid: 112eef117781ece4ea84d28128679fc7, type: 2}
-  heads:
-  - {fileID: 9100000, guid: cffeed10c883a63499920538eb1921ff, type: 2}
-  - {fileID: 9100000, guid: 221ca53c7e8188b4e8d1448a8aa3462c, type: 2}
-  - {fileID: 9100000, guid: c37c5081abb9f7c45bcc6a096610d0fa, type: 2}
   OnPlayerReady: {fileID: 11400000, guid: 3992955b9ab11b143bae10b148436b5f, type: 2}
   minPlayerCount: 3
   playerSpawns:
   - {fileID: 671326792869667320}
   - {fileID: 671326792260207277}
   - {fileID: 671326793249586608}
+  heads:
+  - {fileID: 9100000, guid: cffeed10c883a63499920538eb1921ff, type: 2}
+  - {fileID: 9100000, guid: 221ca53c7e8188b4e8d1448a8aa3462c, type: 2}
+  - {fileID: 9100000, guid: c37c5081abb9f7c45bcc6a096610d0fa, type: 2}
+  playerColor:
+  - {r: 0.9333334, g: 0.5568628, b: 0.227451, a: 1}
+  - {r: 0, g: 0.6533134, b: 1, a: 1}
+  - {r: 0.41403922, g: 0.6415094, b: 0, a: 1}

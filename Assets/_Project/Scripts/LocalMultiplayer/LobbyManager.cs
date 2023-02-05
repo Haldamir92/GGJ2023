@@ -9,10 +9,7 @@ public class LobbyManager : MonoBehaviour
 {
     [SerializeField]
     private GameObjectValueList playerList;
-
-    [SerializeField]
-    private List<RuntimeAnimatorController> heads = new();
-
+    
     [SerializeField]
     private VoidEvent OnPlayerReady;
 
@@ -21,6 +18,12 @@ public class LobbyManager : MonoBehaviour
     
     [SerializeField]
     private List<Transform> playerSpawns = new();
+
+    [SerializeField]
+    private List<RuntimeAnimatorController> heads = new();
+
+    [SerializeField]
+    private List<Color> playerColor = new();
 
 
     private bool started = false;
@@ -37,7 +40,10 @@ public class LobbyManager : MonoBehaviour
 
         player.transform.position = playerSpawns[input.user.index].position;
         player.GetComponentInChildren<Animator>().runtimeAnimatorController = heads[input.user.index];
-        
+        Color myColor = playerColor[input.user.index];
+        player.GetComponentInChildren<SpriteRenderer>().color = myColor;
+        player.GetComponent<PrefabSpawner>().customColor = myColor;
+        player.GetComponent<SingleSpawner>().playerColor = myColor;
     }
 
     public void OnPlayerLeave(PlayerInput input)

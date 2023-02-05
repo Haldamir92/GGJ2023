@@ -9,6 +9,7 @@ public class SingleSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject prefabToSpawn;
     [SerializeField] private Transform spawnPosition;
+    [SerializeField] internal Color playerColor = Color.white;
 
     // [SerializeField] private bool isFacingRight;
     //private void Start()
@@ -26,7 +27,9 @@ public class SingleSpawner : MonoBehaviour
     //}
     public GameObject SpawnAtPosition()
     {
-        return Instantiate(this.prefabToSpawn, spawnPosition.position, Quaternion.identity);
+        var obj = Instantiate(this.prefabToSpawn, spawnPosition.position, Quaternion.identity);
+        obj.GetComponent<PrefabSpawner>().customColor = playerColor;
+        return obj;
         //add direction
     }
 

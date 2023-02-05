@@ -13,6 +13,10 @@ public class PrefabSpawner : MonoBehaviour
     [SerializeField]
     private float scale = 1;
 
+    [SerializeField]
+    internal Color customColor = Color.white;
+
+
     public float Scale { get => scale; set => scale = value; }
 
     private List<GameObject> tailGameObjectList = new List<GameObject>();
@@ -28,6 +32,7 @@ public class PrefabSpawner : MonoBehaviour
         {
             GameObject go = Instantiate(prefab, transform.position, Quaternion.identity);
             go.transform.localScale = Vector3.one * scale;
+            go.GetComponent<SpriteRenderer>().color = customColor;
             tailGameObjectList.Add(go);
             yield return new WaitForSeconds(spawnTime);
         }
