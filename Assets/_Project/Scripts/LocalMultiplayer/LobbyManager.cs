@@ -25,6 +25,10 @@ public class LobbyManager : MonoBehaviour
     [SerializeField]
     private List<Color> playerColor = new();
 
+    public void StartGame()
+    {
+        started= true;  
+    }
 
     private bool started = false;
 
@@ -58,7 +62,6 @@ public class LobbyManager : MonoBehaviour
             if (playerList.Count() == minPlayerCount)
             {
                 OnPlayerReady.Raise();
-                started = true;
             }
             yield return new WaitForSeconds(.25f);
         }

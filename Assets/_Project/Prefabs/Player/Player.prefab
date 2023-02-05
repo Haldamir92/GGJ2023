@@ -197,6 +197,7 @@ GameObject:
   - component: {fileID: 6787977552035764218}
   - component: {fileID: 7352578470380653050}
   - component: {fileID: 983852273577475013}
+  - component: {fileID: 536256177481479378}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -238,6 +239,7 @@ MonoBehaviour:
   prefab: {fileID: 4830053415544804552, guid: e3bfd489f0954bc42906fd4b90851da0, type: 3}
   spawnTime: 0.01
   scale: 1
+  customColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &879761178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,7 +298,19 @@ MonoBehaviour:
     m_ActionId: 351f2ccd-1f9f-44bf-9bec-d62ac5c5f408
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 536256177481479378}
+        m_TargetAssemblyTypeName: PlayerGameStarter, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: aa2781c3-e23c-4103-a4f0-7b4da6512370
     m_ActionName: Player/ReadyToggle[/Keyboard/r]
   - m_PersistentCalls:
@@ -555,6 +569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 7019224435222659860, guid: 83bd8ad6e6440554081e77e02b6e06e2, type: 3}
   spawnPosition: {fileID: 2771597954787802576}
+  playerColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &983852273577475013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -608,6 +623,19 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     Duration: 0
+--- !u!114 &536256177481479378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2771597954787802591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb1b0b1c6a4a8845bede71c69171ff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPlayerReady: {fileID: 11400000, guid: 3992955b9ab11b143bae10b148436b5f, type: 2}
 --- !u!1 &2955774830399620052
 GameObject:
   m_ObjectHideFlags: 0
