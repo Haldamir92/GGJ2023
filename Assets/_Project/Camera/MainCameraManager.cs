@@ -18,7 +18,11 @@ public class MainCameraManager : MonoBehaviour
     private FloatVariable normalizedPosition;
 
     [SerializeField]
+    private FloatVariable raisingNormalizedPosition;
+
+    [SerializeField]
     private FloatVariable verticalSpeed;
+
     [SerializeField]
     private FloatVariable raisingVerticalSpeed;
 
@@ -30,11 +34,12 @@ public class MainCameraManager : MonoBehaviour
 
     [SerializeField]
     private FloatVariable treeLength;
+
     [SerializeField]
     private float treeLengthSpeed;
 
-    bool goingDown = false;
-    bool goingUp = false;
+    private bool goingDown = false;
+    private bool goingUp = false;
 
     public void StartGame()
     {
@@ -45,10 +50,11 @@ public class MainCameraManager : MonoBehaviour
 
     public void EndGame()
     {
+        goingDown = false;
         goingUp = true;
     }
 
-    void Update()
+    private void Update()
     {
         if (goingDown || goingUp)
         {
@@ -67,7 +73,9 @@ public class MainCameraManager : MonoBehaviour
             {
                 cameraTarget.transform.position += Vector3.up * raisingVerticalSpeed.Value * Time.deltaTime;
 
-                if (normalizedPosition.Value >= 1)
+                virtualCamera.m_Lens.OrthographicSize = projectionSize.Evaluate(normalizedPosition.Value);
+
+                if (raisingNormalizedPosition.Value >= 1)
                 {
                     goingUp = false;
                 }
@@ -78,9 +86,9 @@ public class MainCameraManager : MonoBehaviour
         }
     }
 
-    IEnumerator IncreaseTreeLength()
+    private IEnumerator IncreaseTreeLength()
     {
-        while(goingDown)
+        while (goingDown)
         {
             treeLength.Value += 1;
 

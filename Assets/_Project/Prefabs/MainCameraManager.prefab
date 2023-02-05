@@ -78,6 +78,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   normalizedPosition: {fileID: 11400000, guid: 35143b6b97a1baa4ebc9a13d651749ba, type: 2}
+  raisingNormalizedPosition: {fileID: 11400000, guid: a44058dad0f49de4a81e5a2ab99de0d3, type: 2}
   verticalSpeed: {fileID: 11400000, guid: 07cc4d5aaac78f84fa5d59d775861dc1, type: 2}
   raisingVerticalSpeed: {fileID: 11400000, guid: 508398b53c44b304786c186ade7c5c71, type: 2}
   minWorldBounds: {fileID: 11400000, guid: d15e5d34bf38cb84abc2c650aeba9dfc, type: 2}
@@ -213,7 +214,7 @@ MonoBehaviour:
   target: {fileID: 507791092226076843}
   startingPoint: {fileID: 507791092159040681}
   endingPoint: {fileID: 507791091548465500}
-  verticalNormalizedPosition: {fileID: 11400000, guid: 35143b6b97a1baa4ebc9a13d651749ba, type: 2}
+  verticalNormalizedPosition: {fileID: 11400000, guid: a44058dad0f49de4a81e5a2ab99de0d3, type: 2}
 --- !u!1 &507791091330763257
 GameObject:
   m_ObjectHideFlags: 0
