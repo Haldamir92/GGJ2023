@@ -6,7 +6,7 @@ public class TreeNodeManager : MonoBehaviour
 {
     [SerializeField] private PrefabSpawner spawner;
     [SerializeField] private float multiplier;
-    private int branchesLevel = 100;
+    private int branchesLevel = 50;
     private int nodeSize = 5;
     [SerializeField] private int minNodeGeneration = 2;
     [SerializeField] private int maxNodeGeneration = 3;

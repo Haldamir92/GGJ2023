@@ -9,13 +9,23 @@ public class PlayerTriggerManager : MonoBehaviour
     private LayerMask enemiesLayerMask;
 
     [SerializeField]
+    private LayerMask endGameLayerMask;
+
+    [SerializeField]
     private UnityEvent<GameObject> onHitEnemy;
+
+    [SerializeField]
+    private UnityEvent<GameObject> onEndGame;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (IsInLayerMask(collision.gameObject.layer, enemiesLayerMask))
         {
             onHitEnemy?.Invoke(collision.gameObject);
+        }
+        else if (IsInLayerMask(collision.gameObject.layer, endGameLayerMask))
+        {
+            onEndGame?.Invoke(collision.gameObject);
         }
         else
         {

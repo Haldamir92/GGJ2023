@@ -43,7 +43,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6744674033717853603}
   - component: {fileID: 6744674033717853602}
-  m_Layer: 0
+  - component: {fileID: 2133394285782591676}
+  m_Layer: 4
   m_Name: Acqua
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,6 +119,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2133394285782591676
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6744674033717853629}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 5.812805, y: -36.8526}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.48, y: 13.71}
+    newSize: {x: 906.2, y: 13.71}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 895.26526, y: 84.40375}
+  m_EdgeRadius: 0
 --- !u!1 &6744674034560595643
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +155,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6744674034560595640}
   - component: {fileID: 6744674034560595641}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Acqua (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ObjectsSpawner : MonoBehaviour
 {
-    [SerializeField] private Camera myCamera;
+    
     [SerializeField] private Vector3Variable minCameraWorldBound;
     [SerializeField] private Vector3Variable maxCameraWorldBound;
     [SerializeField] private GameObject[] obstaclesPrefabs;
@@ -15,6 +15,13 @@ public class ObjectsSpawner : MonoBehaviour
 
     [SerializeField] private float spawnDistanceBetweenObjects;
     private float nextDistance;
+
+    private Camera myCamera;
+
+    private void Start()
+    {
+        myCamera = Camera.main;
+    }
 
     private void Update()
     {
