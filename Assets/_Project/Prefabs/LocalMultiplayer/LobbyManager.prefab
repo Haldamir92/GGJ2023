@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 343125196}
   - component: {fileID: 343125198}
   - component: {fileID: 343125197}
+  - component: {fileID: 5128056157465944043}
   - component: {fileID: 343125199}
   m_Layer: 5
   m_Name: Text (TMP)
@@ -136,6 +137,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5128056157465944043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343125195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5761af441219a6408a3695f7a1a42ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lobbyText: {fileID: 343125197}
+  playerList: {fileID: 11400000, guid: 112eef117781ece4ea84d28128679fc7, type: 2}
+  lobby: {fileID: 671326793441279309}
 --- !u!114 &343125199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,6 +571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerList: {fileID: 11400000, guid: 112eef117781ece4ea84d28128679fc7, type: 2}
+  heads: []
   OnPlayerReady: {fileID: 11400000, guid: 3992955b9ab11b143bae10b148436b5f, type: 2}
   minPlayerCount: 3
   playerSpawns:
