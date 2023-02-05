@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a12f125d82d0f9c418c686caecff4bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playOnStart: 1
+  playOnStart: 0
   EventsSequence:
   - Note: 
     Events:
@@ -801,9 +801,82 @@ Transform:
   m_Children:
   - {fileID: 7179804468987531799}
   - {fileID: 9170859813676197446}
+  - {fileID: 4135555695669162074}
   m_Father: {fileID: 2771597954787802576}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7696967544733120885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4135555695669162074}
+  - component: {fileID: 2305438699129953875}
+  m_Layer: 0
+  m_Name: OnStartGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4135555695669162074
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7696967544733120885}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8506426477237656937}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2305438699129953875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7696967544733120885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2458933140c54c9db0aec7a69c1b617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 983852273577475013}
+        m_TargetAssemblyTypeName: EventsManager, Assembly-CSharp
+        m_MethodName: StartEventsSequence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 0
+  _eventReference:
+    _usage: 0
+    _event: {fileID: 11400000, guid: 3992955b9ab11b143bae10b148436b5f, type: 2}
+    _eventInstancer: {fileID: 0}
+    _collection: {fileID: 0}
+    _list: {fileID: 0}
+    _collectionInstancer: {fileID: 0}
+    _listInstancer: {fileID: 0}
 --- !u!1001 &4636167277735230855
 PrefabInstance:
   m_ObjectHideFlags: 0

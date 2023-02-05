@@ -85,7 +85,9 @@ MonoBehaviour:
   maxWorldBounds: {fileID: 11400000, guid: d68f38a7814f322439a074017297b43b, type: 2}
   treeLength: {fileID: 11400000, guid: 214fc5eb89292bd438813d08e1a97534, type: 2}
   treeLengthSpeed: 0.2
-  raisingOrthographicSizeSpeed: 8
+  raisingOrthographicSizeSpeed: 20
+  endingPosition: {fileID: 507791091330763256}
+  raisingEndingPosition: {fileID: 507791091548465500}
 --- !u!114 &507791090858417323
 MonoBehaviour:
   m_ObjectHideFlags: 0

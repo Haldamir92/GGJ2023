@@ -41,6 +41,12 @@ public class MainCameraManager : MonoBehaviour
     [SerializeField]
     private float raisingOrthographicSizeSpeed;
 
+    [SerializeField]
+    private Transform endingPosition;
+
+    [SerializeField]
+    private Transform raisingEndingPosition;
+
     private bool goingDown = false;
     private bool goingUp = false;
 
@@ -75,6 +81,8 @@ public class MainCameraManager : MonoBehaviour
                 if (normalizedPosition.Value >= 1)
                 {
                     goingDown = false;
+
+                    cameraTarget.transform.position = new Vector3(cameraTarget.transform.position.x, endingPosition.position.y, cameraTarget.transform.position.z);
                 }
             }
             else
@@ -95,6 +103,8 @@ public class MainCameraManager : MonoBehaviour
                 if (raisingNormalizedPosition.Value >= 1)
                 {
                     goingUp = false;
+
+                    cameraTarget.transform.position = new Vector3(cameraTarget.transform.position.x, raisingEndingPosition.position.y, cameraTarget.transform.position.z);
                 }
             }
 
