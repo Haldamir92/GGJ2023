@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Cinemachine;
 using UnityAtoms.BaseAtoms;
+using UnityEngine;
 
 public class MainCameraManager : MonoBehaviour
 {
@@ -27,8 +25,17 @@ public class MainCameraManager : MonoBehaviour
     [SerializeField]
     private Vector3Variable maxWorldBounds;
 
+    bool started = false;
+
+    public void StartGame()
+    {
+        started = true;
+    }
+
     void Update()
     {
+        if (!started) return;
+
         cameraTarget.transform.position += Vector3.down * verticalSpeed.Value * Time.deltaTime;
 
         virtualCamera.m_Lens.OrthographicSize = projectionSize.Evaluate(normalizedPosition.Value);

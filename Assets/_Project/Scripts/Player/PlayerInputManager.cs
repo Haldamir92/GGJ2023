@@ -18,14 +18,23 @@ public class PlayerInputManager : MonoBehaviour
     [SerializeField]
     private Vector2 horizontalRandomRange = new Vector2(-1.5f, 1.5f);
 
+    private bool gameStarted = false;
+
     Vector2 moveAxis = Vector2.zero;
     public void GetMovementAxis(CallbackContext ctx)
     {
         moveAxis = ctx.ReadValue<Vector2>();
     }
 
+    public void OnGameStart()
+    { 
+        gameStarted= true;
+    }
+
     private void Update()
     {
+        if (!gameStarted) return;
+
         Vector2 velocity = Vector2.down * gravitySpeed;
 
         velocity.x = moveAxis.x * movingSpeed;

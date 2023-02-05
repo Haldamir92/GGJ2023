@@ -14,18 +14,26 @@ public class LobbyManager : MonoBehaviour
     private VoidEvent OnPlayerReady;
 
     [SerializeField]
-    private int minPlayerCount;
+    internal int minPlayerCount; 
+    
+    [SerializeField]
+    private List<Transform> playerSpawns = new();
+
 
     private bool started = false;
 
     private void Start()
     {
-        StartCoroutine(CheckPlayerReady());
+        StartCoroutine(CheckPlayers());
     }
 
     public void OnPlayerJoin(PlayerInput input)
     {
-        playerList.Add(input.gameObject);
+        var player = input.gameObject;
+        playerList.Add(player);
+
+        player.transform.position = playerSpawns[input.user.index].position;
+        
     }
 
     public void OnPlayerLeave(PlayerInput input)
@@ -33,33 +41,16 @@ public class LobbyManager : MonoBehaviour
         playerList.Remove(input.gameObject);
     }
 
-    private void OnDestroy()
+    IEnumerator CheckPlayers()
     {
-        playerList.Clear();
-    }
-
-    IEnumerator CheckPlayerReady()
-    {
-        while (!started)
+        while(!started)
         {
-            if (playerList.Count >= minPlayerCount)
+            if (playerList.Count() == minPlayerCount)
             {
-                if (playerList.Select(x => x.GetComponent<ReadyStatus>()).All(x => x.IsReady))
-                {
-                    //StartGame
-                    OnPlayerReady.Raise();
-                    started = true;
-                }
+                OnPlayerReady.Raise();
+                started = true;
             }
             yield return new WaitForSeconds(.25f);
-        }
-    }
-
-    private void Update()
-    {
-        if (playerList.Count >= minPlayerCount)
-        {
-            //StartGame
         }
     }
 }
