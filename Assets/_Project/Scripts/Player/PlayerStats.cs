@@ -11,17 +11,17 @@ public class PlayerStats : MonoBehaviour
     [SerializeField]
     private BoolVariableInstancer isPlayerInsideCameraBounds;
 
-    private void OnEnable()
-    {
-        players.Add(gameObject);
-    }
-
     private void Update()
     {
         if(!isPlayerInsideCameraBounds.Value)
         {
-            Respawn();
+            Die();
         }
+    }
+
+    public void Die()
+    {
+        Respawn();
     }
 
     private void Respawn()
