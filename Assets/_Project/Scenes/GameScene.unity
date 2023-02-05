@@ -541,5 +541,21 @@ PrefabInstance:
       propertyPath: minPlayerCount
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 671326793441279309, guid: 95f94f4fa30c1c846b7bf501e2aa5be4, type: 3}
+      propertyPath: heads.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 671326793441279309, guid: 95f94f4fa30c1c846b7bf501e2aa5be4, type: 3}
+      propertyPath: heads.Array.data[0]
+      value: 
+      objectReference: {fileID: 9100000, guid: cffeed10c883a63499920538eb1921ff, type: 2}
+    - target: {fileID: 671326793441279309, guid: 95f94f4fa30c1c846b7bf501e2aa5be4, type: 3}
+      propertyPath: heads.Array.data[1]
+      value: 
+      objectReference: {fileID: 9100000, guid: 221ca53c7e8188b4e8d1448a8aa3462c, type: 2}
+    - target: {fileID: 671326793441279309, guid: 95f94f4fa30c1c846b7bf501e2aa5be4, type: 3}
+      propertyPath: heads.Array.data[2]
+      value: 
+      objectReference: {fileID: 9100000, guid: c37c5081abb9f7c45bcc6a096610d0fa, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95f94f4fa30c1c846b7bf501e2aa5be4, type: 3}

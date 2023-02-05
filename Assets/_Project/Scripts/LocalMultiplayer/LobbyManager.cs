@@ -11,6 +11,9 @@ public class LobbyManager : MonoBehaviour
     private GameObjectValueList playerList;
 
     [SerializeField]
+    private List<RuntimeAnimatorController> heads = new();
+
+    [SerializeField]
     private VoidEvent OnPlayerReady;
 
     [SerializeField]
@@ -33,6 +36,7 @@ public class LobbyManager : MonoBehaviour
         playerList.Add(player);
 
         player.transform.position = playerSpawns[input.user.index].position;
+        player.GetComponentInChildren<Animator>().runtimeAnimatorController = heads[input.user.index];
         
     }
 
