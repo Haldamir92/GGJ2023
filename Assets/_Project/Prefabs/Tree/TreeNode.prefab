@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6751176848626287766}
   - component: {fileID: 2054230737750023128}
   - component: {fileID: 4810972759948285316}
+  - component: {fileID: -3616795384809282131}
   m_Layer: 0
   m_Name: TreeNode
   m_TagString: Untagged
@@ -49,6 +50,7 @@ MonoBehaviour:
   prefab: {fileID: 4830053415544804552, guid: 59f5c7c45637eef419569ee0b0ef042c, type: 3}
   spawnTime: 0.1
   scale: 5
+  customColor: {r: 0.5647059, g: 0.38039216, b: 0.34901962, a: 1}
 --- !u!114 &2054230737750023128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,7 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 6751176848626287766}
-  multiplier: 1
+  multiplier: 0.5
   treeHeads: {fileID: 11400000, guid: 1d4ba4d0a2b4ed845a7f872d9f94c22e, type: 2}
   minNodeGeneration: 3
   maxNodeGeneration: 4
@@ -105,3 +107,43 @@ MonoBehaviour:
     _eventInstancer: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
+--- !u!114 &-3616795384809282131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2771597954787802591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2458933140c54c9db0aec7a69c1b617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2054230737750023128}
+        m_TargetAssemblyTypeName: TreeNodeManager, Assembly-CSharp
+        m_MethodName: StopGenerating
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 0
+  _eventReference:
+    _usage: 0
+    _event: {fileID: 11400000, guid: 1cc01ba7dd292204eb900fad54133f80, type: 2}
+    _eventInstancer: {fileID: 0}
+    _collection: {fileID: 0}
+    _list: {fileID: 0}
+    _collectionInstancer: {fileID: 0}
+    _listInstancer: {fileID: 0}

@@ -29,6 +29,7 @@ public class SingleSpawner : MonoBehaviour
     {
         var obj = Instantiate(this.prefabToSpawn, spawnPosition.position, Quaternion.identity);
         obj.GetComponent<PrefabSpawner>().customColor = playerColor;
+        obj.GetComponent<SingleSpawner>().playerColor = playerColor;
         return obj;
         //add direction
     }

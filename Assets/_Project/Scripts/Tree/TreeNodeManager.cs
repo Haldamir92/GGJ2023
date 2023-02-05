@@ -8,7 +8,7 @@ public class TreeNodeManager : MonoBehaviour
     [SerializeField] private PrefabSpawner spawner;
     [SerializeField] private float multiplier;
     [SerializeField] private GameObjectValueList treeHeads;
-    private int branchesLevel = 50;
+    private int branchesLevel = 60;
     private int nodeSize = 5;
     [SerializeField] private int minNodeGeneration = 2;
     [SerializeField] private int maxNodeGeneration = 3;
@@ -30,7 +30,7 @@ public class TreeNodeManager : MonoBehaviour
 
     private void IncreaseLenght()
     {
-        transform.position += Vector3.up * multiplier;
+        transform.position += Vector3.up *0.5f;
 
         if (nodeSize < 10)
         {
@@ -42,6 +42,7 @@ public class TreeNodeManager : MonoBehaviour
     {
         if (size <= 1)
         {
+            spawner.enabled = false;
             canGrow = false;
         }
         spawner.SetScale(size);
@@ -59,6 +60,7 @@ public class TreeNodeManager : MonoBehaviour
             }
             else
             {
+                spawner.enabled = false;
                 canGrow = false;
                 Branch();
             }
@@ -91,5 +93,10 @@ public class TreeNodeManager : MonoBehaviour
     {
         nodeManager.SetSize(nodeSize - 1);
         nodeManager.direction.x += deltaDirection;
+    }
+
+    public void StopGenerating()
+    {
+        spawner.enabled = false;
     }
 }

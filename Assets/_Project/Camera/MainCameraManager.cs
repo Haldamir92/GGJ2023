@@ -38,8 +38,16 @@ public class MainCameraManager : MonoBehaviour
     [SerializeField]
     private float treeLengthSpeed;
 
+    [SerializeField]
+    private float raisingOrthographicSizeSpeed;
+
     private bool goingDown = false;
     private bool goingUp = false;
+
+    private void Start()
+    {
+        virtualCamera.m_Lens.OrthographicSize = projectionSize.Evaluate(0);
+    }
 
     public void StartGame()
     {
@@ -73,7 +81,16 @@ public class MainCameraManager : MonoBehaviour
             {
                 cameraTarget.transform.position += Vector3.up * raisingVerticalSpeed.Value * Time.deltaTime;
 
-                virtualCamera.m_Lens.OrthographicSize = projectionSize.Evaluate(normalizedPosition.Value);
+                float orthographicSizeToReach = projectionSize.Evaluate(1);
+                if (virtualCamera.m_Lens.OrthographicSize < orthographicSizeToReach)
+                {
+                    virtualCamera.m_Lens.OrthographicSize += raisingOrthographicSizeSpeed * Time.deltaTime;
+
+                    if (virtualCamera.m_Lens.OrthographicSize > orthographicSizeToReach)
+                    {
+                        virtualCamera.m_Lens.OrthographicSize = orthographicSizeToReach;
+                    }
+                }
 
                 if (raisingNormalizedPosition.Value >= 1)
                 {

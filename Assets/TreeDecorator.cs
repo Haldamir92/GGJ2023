@@ -11,8 +11,12 @@ public class TreeDecorator : MonoBehaviour
     public void Decorate(GameObject g)
     {
         List<GameObject> heads = new List<GameObject>(treeHeads.List);
-        heads.RemoveAt(0);
-        GameObject head = heads.GetRandomElement();
-        Instantiate(g, head.transform.position, head.transform.rotation);
+        if (heads.Count > 0)
+        {
+            heads.RemoveAt(0);
+            GameObject head = heads.GetRandomElement();
+            treeHeads.Remove(head);
+            Instantiate(g, head.transform.position, head.transform.rotation);
+        }
     }
 }

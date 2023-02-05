@@ -26,6 +26,11 @@ public class PrefabSpawner : MonoBehaviour
         StartCoroutine(PrintSprite());
     }
 
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
     private IEnumerator PrintSprite()
     {
         while (true)
