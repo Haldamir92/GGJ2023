@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityAtoms.BaseAtoms;
 using UnityEngine;
 
 public class TreeNodeManager : MonoBehaviour
 {
     [SerializeField] private PrefabSpawner spawner;
     [SerializeField] private float multiplier;
+    [SerializeField] private GameObjectValueList treeHeads;
     private int branchesLevel = 50;
     private int nodeSize = 5;
     [SerializeField] private int minNodeGeneration = 2;
@@ -79,6 +81,7 @@ public class TreeNodeManager : MonoBehaviour
         for (int i = 0; i < childrenNumber; i++)
         {
             nodes[i] = instancer.InstanceNode(transform.position, transform.rotation);
+            treeHeads.Add(nodes[i]);
             treeNodeManagers[i] = nodes[i].GetComponent<TreeNodeManager>();
             SetNodeStats(treeNodeManagers[i], nodeSize, deltaDirection[i]);
         }

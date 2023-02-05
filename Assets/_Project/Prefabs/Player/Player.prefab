@@ -123,6 +123,8 @@ GameObject:
   - component: {fileID: 476118704434952642}
   - component: {fileID: 4203586680696467256}
   - component: {fileID: 6787977552035764218}
+  - component: {fileID: 7352578470380653050}
+  - component: {fileID: 983852273577475013}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -467,6 +469,73 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particle: {fileID: 1921894392080806172, guid: a26ee204b1f179c47a56fca007363158, type: 3}
   timeToDestroy: 1
+--- !u!114 &7352578470380653050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2771597954787802591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f8c44c9fb851549851c568fe99a79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn: {fileID: 7019224435222659860, guid: 83bd8ad6e6440554081e77e02b6e06e2, type: 3}
+  spawnPosition: {fileID: 2771597954787802576}
+--- !u!114 &983852273577475013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2771597954787802591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a12f125d82d0f9c418c686caecff4bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playOnStart: 1
+  EventsSequence:
+  - Note: 
+    Events:
+      m_PersistentCalls:
+        m_Calls: []
+    Duration: 5
+  - Note: 
+    Events:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7352578470380653050}
+          m_TargetAssemblyTypeName: SingleSpawner, Assembly-CSharp
+          m_MethodName: Spawn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    Duration: 0
+  - Note: 
+    Events:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 983852273577475013}
+          m_TargetAssemblyTypeName: EventsManager, Assembly-CSharp
+          m_MethodName: StartEventsSequence
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    Duration: 0
 --- !u!1 &2955774830399620052
 GameObject:
   m_ObjectHideFlags: 0

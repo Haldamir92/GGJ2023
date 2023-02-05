@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fertilizer
       objectReference: {fileID: 0}
+    - target: {fileID: 411372738490346064, guid: f7cb0aea4e077ca439ab1d06ca939457, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4536531042834559510, guid: f7cb0aea4e077ca439ab1d06ca939457, type: 3}
       propertyPath: m_Size.x
       value: 0.2

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2771597954787802591
+--- !u!1 &297530464333415379
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,85 +8,64 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2771597954787802576}
-  - component: {fileID: 6751176848626287766}
-  - component: {fileID: 2054230737750023128}
-  - component: {fileID: 4810972759948285316}
+  - component: {fileID: 297530464333415377}
+  - component: {fileID: 297530464333415378}
+  - component: {fileID: 297530464333415376}
   m_Layer: 0
-  m_Name: TreeNode
+  m_Name: TreeDecorator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2771597954787802576
+--- !u!4 &297530464333415377
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2771597954787802591}
+  m_GameObject: {fileID: 297530464333415379}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.6, y: -0.83, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6751176848626287766
+--- !u!114 &297530464333415378
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2771597954787802591}
+  m_GameObject: {fileID: 297530464333415379}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84712dbdbbb4a134ba5119fcad7812fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c272a01da9908347a174730badcc41d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4830053415544804552, guid: 59f5c7c45637eef419569ee0b0ef042c, type: 3}
-  spawnTime: 0.1
-  scale: 5
---- !u!114 &2054230737750023128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2771597954787802591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6865bbc22c9b32e41bf64ebfdcc04207, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawner: {fileID: 6751176848626287766}
-  multiplier: 1
   treeHeads: {fileID: 11400000, guid: 1d4ba4d0a2b4ed845a7f872d9f94c22e, type: 2}
-  minNodeGeneration: 3
-  maxNodeGeneration: 4
-  treeNodePrefab: {fileID: 2771597954787802591}
---- !u!114 &4810972759948285316
+--- !u!114 &297530464333415376
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2771597954787802591}
+  m_GameObject: {fileID: 297530464333415379}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7a13c337fc59432a95a17e5465b0c03, type: 3}
+  m_Script: {fileID: 11500000, guid: d7bf1607e7be0499885b187311bc83f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _developerDescription: 
   _unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2054230737750023128}
-        m_TargetAssemblyTypeName: TreeNodeManager, Assembly-CSharp
-        m_MethodName: OnLenghtIncrease
-        m_Mode: 1
+      - m_Target: {fileID: 297530464333415378}
+        m_TargetAssemblyTypeName: TreeDecorator, Assembly-CSharp
+        m_MethodName: Decorate
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -101,7 +80,7 @@ MonoBehaviour:
   _replayEventBufferOnRegister: 0
   _eventReference:
     _usage: 0
-    _event: {fileID: 11400000, guid: 4f723bc6327029f4385776b088a694a8, type: 2}
+    _event: {fileID: 11400000, guid: 2d238beeb3aed7547b27762516ee4555, type: 2}
     _eventInstancer: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}

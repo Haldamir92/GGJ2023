@@ -47,9 +47,18 @@ MonoBehaviour:
   minCameraWorldBound: {fileID: 11400000, guid: d15e5d34bf38cb84abc2c650aeba9dfc, type: 2}
   maxCameraWorldBound: {fileID: 11400000, guid: d68f38a7814f322439a074017297b43b, type: 2}
   obstaclesPrefabs:
-  - {fileID: 1460572963374993284, guid: 74603d1e72cd0494abc7c175080a2c49, type: 3}
-  - {fileID: 1460572963374993284, guid: 7108aa5ce0e1aae4d8a719073b894992, type: 3}
+  - {fileID: 4408979803435008358, guid: a571784651d4b2640adeaf032e32ad03, type: 3}
+  - {fileID: 388394307627210007, guid: b7e1f8ea40c495d4097869fdfbd966e3, type: 3}
+  - {fileID: 7575179244043535737, guid: 0ad0a222532170f46833c211ee49396f, type: 3}
+  - {fileID: 7166944421097433179, guid: 9c45e9bec453b5547b55cb1bb570b6c9, type: 3}
+  - {fileID: 4777528330983016180, guid: 301875aead999e847beeb7409b0d752c, type: 3}
+  - {fileID: 6796983667596539437, guid: 5889501e21054ed42908d7e7f0fb39c4, type: 3}
+  - {fileID: 6672172903269275248, guid: 42a449166a546244cbef5eb85d7418bf, type: 3}
+  - {fileID: 8994682107097074275, guid: 89e843d76e54e8642988e7a4f791cee1, type: 3}
   fertilizersPrefabs:
-  - {fileID: 7982566378957718699, guid: fa0eecbf6a7eb5742a4c063862fd1907, type: 3}
+  - {fileID: 4529135805021175354, guid: 91ff0a806bc2f334eaf8f95d98908881, type: 3}
+  - {fileID: 592166044413981755, guid: b146202d67865b849b95df01185473a6, type: 3}
+  - {fileID: 6267428061661145094, guid: 5a29a7a36a962b644a312e58e68ed37e, type: 3}
+  - {fileID: 8126343590117711710, guid: 625f54405cf3df64b9b51d778eea0bbd, type: 3}
   obstaclesProbability: 70
   spawnDistanceBetweenObjects: 10
