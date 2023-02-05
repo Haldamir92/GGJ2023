@@ -7,8 +7,8 @@ using UnityEngine;
 
 public class NetworkLobby : MonoBehaviour
 {
-    [SerializeField]
-    GameObjectValueList playerList;
+    //[SerializeField]
+    //GameObjectValueList playerList;
 
     [SerializeField]
     int minPlayerToStart = 2;
@@ -23,19 +23,8 @@ public class NetworkLobby : MonoBehaviour
     void Start()
     {
         StartCoroutine(CheckClientsReady());
-        bridge.ClientConnections.OnCreated += OnPlayerJoin;
-        bridge.ClientConnections.OnDestroyed += OnPlayerLeft;
     }
-
-    private void OnPlayerLeft(CoherenceClientConnection obj)
-    {
-        playerList.Remove(obj.GameObject);
-    }
-
-    private void OnPlayerJoin(CoherenceClientConnection obj)
-    {
-        playerList.Add(obj.GameObject);
-    }
+     
 
     IEnumerator CheckClientsReady()
     {

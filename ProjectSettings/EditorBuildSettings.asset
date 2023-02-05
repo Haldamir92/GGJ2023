@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Project/Scenes/NetworkedScene.unity
-    guid: fbb2db62694aef64780d480d1b7ad438
+    path: Assets/_Project/Scenes/GameScene.unity
+    guid: f1719b50a4023304f8050f660beab6e0
   m_configObjects:
     io.coherence.simulator.build.options: {fileID: 11400000, guid: 6752b33240a6a4f4ebb16ba6c8945cbd, type: 2}
