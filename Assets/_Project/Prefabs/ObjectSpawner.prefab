@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b077c169a727a2549b9131fd9a931c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCamera: {fileID: 0}
   minCameraWorldBound: {fileID: 11400000, guid: d15e5d34bf38cb84abc2c650aeba9dfc, type: 2}
   maxCameraWorldBound: {fileID: 11400000, guid: d68f38a7814f322439a074017297b43b, type: 2}
   obstaclesPrefabs:
